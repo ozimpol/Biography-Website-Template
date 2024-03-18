@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memleketim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 contenteditable data-heading="YARKÖY / MAĞUSA">YARKÖY / MAĞUSA</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="egitim.html">Eğitim Hayatım</a></li>
+      <li><a href="cocukluk.html">Hayatım</a></li>
+      <li><a href="memleket.html">Memleketim</a></li>
+      <li><a href="hobiler.html">Hobilerim</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="card-container">
+  <div class="info-card">
+    <div class="image">
+      <img src="images/yarkoy.jpg">
+    </div>
+    <div class="info">
+      <div class="title">Yarköy</div>
+      <div class="description">1974 Kıbrıs Harekâtı'na kadar Kıbrıslı Rumların yaşadığı Yarköy'e o tarihten sonra Denizliden göçmenler yerleştirildi. Köy, İskele'nin 6 km kuzeydoğusunda yer almaktadır. Nüfusu 2011 yılı itibarı ile 429'dur.</div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="image">
+      <img src="images/iskele.jpg">
+    </div>
+    <div class="info">
+      <div class="title">İskele</div>
+      <div class="description">Eski adı Trikomo olan İskele ilçesi, 1998'de Mağusa'dan ayrılmıştır. Nüfusu 20245 olan ilçenin en büyük geçim kaynakları turizm ve balıkçılık.</div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="image">
+      <img src="images/magusa.jpg">
+    </div>
+    <div class="info">
+      <div class="title">Mağusa</div>
+      <div class="description">Gazimağusa ya da Mağusa, Kıbrıs Adası'nda bir liman kentidir. Mağusa, Akdeniz'in en fazla güçlendirilmiş limanlarından biridir. Yakındoğu ile Avrupa arasında bir basamak oluşturur. Nüfusu 2011 yılı itibarı ile 40.920'dir.</div>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="image">
+      <img src="images/kıbrıs.jpg">
+    </div>
+    <div class="info">
+      <div class="title">Kıbrıs</div>
+      <div class="description">Akdeniz'in mükemmel iklimi ve sıcak insanlarıyla ünlü Kuzey Kıbrıs, 3 kıtayı birleştiren en güzel adalardan biridir. Efsanede anlatıldığı gibi Sezar'ın Kleopatra'ya aşkını kanıtlamak için bu adayı vermesi en güzel örnektir.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.info-card')
+
+cards.forEach((card) => {
+   card.addEventListener('click', () => {
+     const description = card.querySelector('.description')
+     
+     if (!description.hasAttribute('style') && description.scrollHeight > 24) {
+       description.setAttribute('style', `height: ${description.scrollHeight}px`)
+       card.classList.add('-expanded')
+     } else {
+       description.removeAttribute('style')
+       card.classList.remove('-expanded') 
+     }
+     
+   })
+})
+
+
+</script>
+</body>
+</html>

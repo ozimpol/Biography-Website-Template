@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form>
+        <input type="text" class="default-input half" placeholder="Tam ad" />
+        <input type="text" class="default-input half float-right" placeholder="Email"/>
+
+          <div class="default-input">   
+            <div class="radio">
+              <p>Cinsiyet:</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <input id="radio-1" name="radio" type="radio" checked>
+              <label for="radio-1" class="radio-label">Erkek</label>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+              <input id="radio-2" name="radio" type="radio">
+              <label  for="radio-2" class="radio-label">Kadın</label>
+            </div>
+          </div>
+        </p>       
+        <select class="default-input">
+          <option value="" disabled selected>Konu seçin</option>
+          <option value="talep">Talep</option>
+          <option value="şikayet">Şikayet</option>
+          <option value="öneri">Öneri</option>
+        </select>
+        <textarea placeholder="Talebinizi buraya yazın." class="default-input"></textarea>
+        <input class="btn blue float-right" type="submit" value="E-mail gönder">
+      </form>
+</body>
+</html>

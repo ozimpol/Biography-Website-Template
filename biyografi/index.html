@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Sayfa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1 contenteditable data-heading="AD SOYAD">AD SOYAD</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="egitim.html">Eğitim Hayatım</a></li>
+      <li><a href="cocukluk.html">Hayatım</a></li>
+      <li><a href="memleket.html">Memleketim</a></li>
+      <li><a href="hobiler.html">Hobilerim</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="content-wrapper">
+  <div class="slideshow-with-dots-thumbnails">
+    <div class="slideshow-container">
+      <div class="slideshow">
+        <div class="slide fade">
+          <img src="images/image1.jpg" alt="Resim 1">
+        </div>
+        <div class="slide fade">
+          <img src="images/image2.jpg" alt="Resim 2">
+        </div>
+        <div class="slide fade">
+          <img src="images/image3.jpg" alt="Resim 3">
+        </div>
+        <div class="slide fade">
+          <img src="images/image4.jpg" alt="Resim 4">
+        </div>
+        <div class="slide fade">
+          <img src="images/image5.jpg" alt="Resim 5">
+        </div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    
+    <div class="thumbnails">
+      <img class="thumbnail" src="images/image1.jpg" onclick="currentSlide(1)" alt="Önizleme Resim 1">
+      <img class="thumbnail" src="images/image2.jpg" onclick="currentSlide(2)" alt="Önizleme Resim 2">
+      <img class="thumbnail" src="images/image3.jpg" onclick="currentSlide(3)" alt="Önizleme Resim 3">
+      <img class="thumbnail" src="images/image4.jpg" onclick="currentSlide(4)" alt="Önizleme Resim 4">
+      <img class="thumbnail" src="images/image5.jpg" onclick="currentSlide(5)" alt="Önizleme Resim 5">
+    </div>
+  </div>
+  
+  <div class="text-section">
+    <h2 class="wrapper">HOŞGELDİNİZ!</h2>
+    <p> Merhaba, ben XXXXXXXXX. Bu benim kişisel web sayfam. Bu sayfada geçmiş yaşantım, yaşadığım yer ve hobilerim hakkında sizlerle paylaşımda bulunuyorum. Aynı zamanda iletişim kanallarına da web sayfamdan ulaşabilirsiniz.</p>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+    showSlides(slideIndex);
+
+    let slideTimer = setInterval(() => {
+      plusSlides(1);
+    }, 5000); 
+  });
+</script>
+
+</body>
+</html>
